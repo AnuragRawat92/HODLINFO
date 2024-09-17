@@ -1,0 +1,342 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif; /* Sets the font family */
+    background-color: #f0f0f0; /* Light grey background color */
+    color: #000; /* Black text color */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color changes */
+}
+
+/* Header Styles */
+.header {
+    display: flex; /* Flexbox layout */
+    flex-direction: row; /* Aligns items in a row */
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Distributes space between items */
+    padding: 1rem; /* Adds padding around the header */
+    background-color: #fff; /* White background color */
+    margin-bottom: 2rem; /* Adds space below the header */
+}
+
+/* Title Styles */
+.title {
+    font-size: 3rem; /* Large font size for the title */
+    color: #008080; /* Teal color */
+    margin-right: 2rem; /* Space to the right of the title */
+}
+
+/* Controls Container Styles */
+.controls {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 1rem; /* Space between items */
+}
+
+/* Select Styles */
+.select {
+    padding: 0.5rem; /* Adds padding inside the select element */
+    border-radius: 0.25rem; /* Rounds the corners */
+    border: 1px solid #ccc; /* Light grey border */
+    background-color: #fff; /* White background color */
+}
+
+/* Button Styles */
+.button {
+    padding: 0.5rem 1rem; /* Adds padding inside the button */
+    border-radius: 0.25rem; /* Rounds the corners */
+    border: none; /* Removes default border */
+    background-color: #008080; /* Teal background color */
+    color: #fff; /* White text color */
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
+/* Info Container Styles */
+.info {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 1rem; /* Space between items */
+}
+
+/* Countdown Timer Styles */
+.countdown {
+    width: 2.5rem; /* Fixed width */
+    height: 2.5rem; /* Fixed height */
+    border-radius: 50%; /* Circular shape */
+    background-color: transparent; /* Transparent background */
+    color: #008080; /* Teal color */
+    border: 3px solid #fff; /* White border */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Aligns items horizontally in the center */
+    font-size: 1rem; /* Font size for countdown text */
+}
+
+/* Dark Mode Toggle Styles */
+.toggle {
+    position: relative; /* Relative positioning for the slider */
+    display: inline-block; /* Inline block layout */
+    width: 34px; /* Width of the toggle */
+    height: 20px; /* Height of the toggle */
+}
+
+.toggle input {
+    opacity: 0; /* Hides the input checkbox */
+    width: 0; /* Removes width */
+    height: 0; /* Removes height */
+}
+
+.slider {
+    position: absolute; /* Absolute positioning */
+    cursor: pointer; /* Pointer cursor */
+    top: 0; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+    right: 0; /* Aligns to the right */
+    bottom: 0; /* Aligns to the bottom */
+    background-color: #ccc; /* Light grey background */
+    transition: .4s; /* Smooth transition */
+    border-radius: 50px; /* Rounds the corners */
+}
+
+.slider:before {
+    position: absolute; /* Absolute positioning for the slider knob */
+    content: ""; /* Empty content */
+    height: 12px; /* Fixed height */
+    width: 12px; /* Fixed width */
+    border-radius: 50%; /* Circular shape */
+    left: 4px; /* Space from the left */
+    bottom: 4px; /* Space from the bottom */
+    background-color: white; /* White knob */
+    transition: .4s; /* Smooth transition */
+}
+
+/* Toggle Active State Styles */
+input:checked + .slider {
+    background-color: #008080; /* Teal background when checked */
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px); /* Moves the knob to the right when checked */
+}
+
+/* Table Styles */
+.table-b {
+    margin-bottom: 2rem; /* Adds space below the table */
+}
+
+.table-container {
+    overflow-x: auto; /* Allows horizontal scrolling */
+}
+
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapses borders */
+}
+
+th, td {
+    padding: 0.5rem; /* Adds padding inside table cells */
+    text-align: left; /* Aligns text to the left */
+    border-bottom: 1px solid #ddd; /* Light grey border at the bottom */
+}
+
+th {
+    background-color: #008080; /* Teal background for table headers */
+    color: #fff; /* White text color for table headers */
+}
+
+.text-right {
+    text-align: right; /* Aligns text to the right */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #fff; /* White background color */
+    padding: 1rem; /* Adds padding inside the footer */
+    text-align: center; /* Centers the text */
+}
+
+.footer-button {
+    padding: 0.5rem 1rem; /* Adds padding inside the button */
+    border-radius: 0.25rem; /* Rounds the corners */
+    border: none; /* Removes default border */
+    background-color: #008080; /* Teal background color */
+    color: #fff; /* White text color */
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212; /* Dark background color */
+    color: #e0e0e0; /* Light text color */
+}
+
+.dark-mode .header {
+    background-color: #121212; /* Dark background for header in dark mode */
+}
+
+.dark-mode .price-card {
+    background-color: #121212; /* Dark background for price cards in dark mode */
+    color: #008080; /* Teal text color */
+}
+
+.dark-mode .best-price-container {
+    background-color: #121212; /* Dark background for price container in dark mode */
+}
+
+.dark-mode table {
+    border-color: #333; /* Darker border color for tables in dark mode */
+}
+
+.dark-mode th {
+    background-color: #333; /* Dark background for table headers in dark mode */
+}
+
+.dark-mode .footer {
+    background-color: #1e1e1e; /* Dark background for footer in dark mode */
+}
+
+/* Best Price Container Styles */
+.best-price-container {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 1rem; /* Space between grid items */
+    margin-bottom: 2rem; /* Adds space below the container */
+    margin-top: 3rem; /* Adds space above the container */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .best-price-container {
+        grid-template-columns: repeat(3, 1fr); /* Three equal-width columns for small screens */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .best-price-container {
+        grid-template-columns: repeat(5, 1fr); /* Five equal-width columns for medium screens */
+    }
+}
+
+/* Price Card Styles */
+.price-card {
+    text-align: center; /* Centers text inside the card */
+    color: #008080; /* Teal text color */
+}
+
+/* Percentage Styles */
+.percentage {
+    font-size: 2rem; /* Default font size */
+    font-weight: bold; /* Bold text */
+    font-family: monospace; /* Monospace font for percentage */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .percentage {
+        font-size: 2.5rem; /* Larger font size for small screens */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .percentage {
+        font-size: 3rem; /* Larger font size for medium screens */
+    }
+}
+
+/* Timeframe Styles */
+.timeframe {
+    font-size: 0.875rem; /* Default font size */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .timeframe {
+        font-size: 1rem; /* Larger font size for small screens */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .timeframe {
+        font-size: 1.125rem; /* Larger font size for medium screens */
+    }
+}
+
+/* Best Price Styles */
+.best-price {
+    grid-column: span 2; /* Spans across two columns in the grid */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .best-price {
+        grid-column: span 1; /* Spans across one column for small screens */
+    }
+}
+
+/* Best Price Text Styles */
+.best-price-text {
+    font-size: 1.125rem; /* Default font size */
+    margin-bottom: 0.5rem; /* Space below the text */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .best-price-text {
+        font-size: 1.25rem; /* Larger font size for small screens */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .best-price-text {
+        font-size: 1.5rem; /* Larger font size for medium screens */
+    }
+}
+
+/* Best Price Value Styles */
+.best-price-value {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Centers items horizontally */
+    align-items: baseline; /* Aligns items to the baseline */
+    font-size: 2.5rem; /* Default font size */
+    font-weight: bold; /* Bold text */
+    font-family: monospace; /* Monospace font for value */
+}
+
+.currency-symbol {
+    font-size: 2rem; /* Default font size */
+    margin-right: 0.5rem; /* Space to the right of the currency symbol */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .best-price-value {
+        font-size: 3rem; /* Larger font size for small screens */
+    }
+
+    .currency-symbol {
+        font-size: 2.5rem; /* Larger font size for small screens */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .best-price-value {
+        font-size: 3.5rem; /* Larger font size for medium screens */
+    }
+
+    .currency-symbol {
+        font-size: 3rem; /* Larger font size for medium screens */
+    }
+}
+
+/* Average Price Styles */
+.average-price {
+    font-size: 0.75rem; /* Default font size */
+    color: #888888; /* Light grey color */
+    margin-top: 0.5rem; /* Space above the text */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .average-price {
+        font-size: 0.875rem; /* Larger font size for small screens */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .average-price {
+        font-size: 1rem; /* Larger font size for medium screens */
+    }
+}

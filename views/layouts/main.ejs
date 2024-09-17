@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character encoding for the document -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the page, dynamically set via EJS -->
+    <title>
+        <%= locals.title %>
+    </title>
+
+    <!-- Description meta tag, dynamically set via EJS -->
+    <meta name="description" content="<%= locals.description %>">
+
+    <!-- Link to the main stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Container for the main content of the page -->
+    <div class="container">
+        <!-- Main section of the page -->
+        <main class="main"></main>
+
+        <!-- Dynamic content insertion via EJS -->
+        <%- body %>
+    </div>
+
+    <!-- Link to the main JavaScript file -->
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+ <!-- Header Section -->
+ <header class="header">
+  <h1 class="title">HODLINFO</h1>
+  <div class="controls">
+      <!-- Currency Selection -->
+      <select id="currency-select" class="select">
+          <option>INR</option>
+      </select>
+      <!-- Cryptocurrency Selection -->
+      <select id="crypto-select" class="select">
+          <!-- Options will be populated by JavaScript -->
+      </select>
+      <!-- Buy Button -->
+      <button id="buy-btn" class="button">BUY BTC</button>
+  </div>
+  <div class="info">
+      <!-- Countdown Timer -->
+      <div id="countdown" class="countdown">5</div>
+      <!-- Connect to Telegram Button -->
+      <button id="connect-telegram" class="button">Connect Telegram</button>
+      <!-- Dark Mode Toggle -->
+      <label class="toggle">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider"></span>
+      </label>
+  </div>
+</header>
+
+<!-- Best Price Container -->
+<div class="best-price-container">
+  <!-- Price Card for 5 Minutes -->
+  <div class="price-card">
+      <div class="percentage">0.1 %</div>
+      <div class="timeframe">5 Mins</div>
+  </div>
+  <!-- Price Card for 1 Hour -->
+  <div class="price-card">
+      <div class="percentage">0.96 %</div>
+      <div class="timeframe">1 Hour</div>
+  </div>
+  <!-- Best Price Card -->
+  <div class="price-card best-price">
+      <div class="best-price-text">Best Price to Trade</div>
+      <div class="best-price-value">
+          <span class="currency-symbol">₹</span>26,56,110
+      </div>
+      <div class="average-price">Average BTC/INR net price including commission</div>
+  </div>
+  <!-- Price Card for 1 Day -->
+  <div class="price-card">
+      <div class="percentage">2.73 %</div>
+      <div class="timeframe">1 Day</div>
+  </div>
+  <!-- Price Card for 7 Days -->
+  <div class="price-card">
+      <div class="percentage">7.51 %</div>
+      <div class="timeframe">7 Days</div>
+  </div>
+</div>
+
+<!-- Table Section -->
+<div class="table-b">
+  <!-- Table Container -->
+  <div class="table-container">
+      <table id="crypto-table">
+          <thead>
+              <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th class="text-right">Last Price</th>
+                  <th class="text-right">Buy / Sell</th>
+                  <th class="text-right">Volume</th>
+                  <th class="text-right">Base Unit</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Rows will be dynamically added here -->
+          </tbody>
+      </table>
+
+      <!-- Loading Spinner -->
+      <div id="loading-spinner" class="loading">
+          <img src="/loading.svg" alt="Loading..." width="50" height="50">
+      </div>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <!-- Add to Home Screen Button -->
+  <button class="footer-button">
+      Add hodlinfo to home screen
+  </button>
+</footer>
